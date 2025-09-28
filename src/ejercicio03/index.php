@@ -35,6 +35,7 @@
 	} else {
 		echo "<p>Faltan parámetros altura o radio</p>";
 	}
+	    <a id="volver" href="../index.html">Volver</a>
 	?>
 </body>
 </html>

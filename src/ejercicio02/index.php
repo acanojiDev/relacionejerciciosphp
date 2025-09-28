@@ -30,5 +30,6 @@
 			echo "<p>Porfavor introduzca un numero válido.</p>";
 		}
 	?>
+	    <a id="volver" href="../index.html">Volver</a>
 </body>
 </html>

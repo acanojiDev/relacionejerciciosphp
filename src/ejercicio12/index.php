@@ -23,18 +23,17 @@
 
 	<?php
 		if(isset($_POST["altura"])){
-			$altura = $_POST["altura"];
-			for ($i=0; $i <= $altura ; $i++) {
-				for ($j=0; $j<$i; $j++) {
-					if($i%2==0){
-						print_r(' ');
-					}else{
-						print_r('*');
-					}
+			$altura = intval($_POST["altura"]);
+
+			for ($i = 1; $i <= $altura; $i++) {
+				for ($j = 1; $j <= $i; $j++) {
+					echo '*';
 				}
-				echo "<br>";
+				echo '<br>';
 			}
 		}
 	?>
+
+	    <a id="volver" href="../index.html">Volver</a>
 </body>
 </html>

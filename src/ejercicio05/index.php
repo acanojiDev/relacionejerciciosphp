@@ -41,9 +41,8 @@
 	}else{
 		echo "<p>Tienes un campo vacío </p>";
 	}
-
-
-
 	?>
+
+	    <a id="volver" href="../index.html">Volver</a>
 </body>
 </html>

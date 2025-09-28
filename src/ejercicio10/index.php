@@ -31,5 +31,8 @@
 		echo "<p>La media de los numeros  es: $media </p>";
 	}
 	?>
+
+
+    <a id="volver" href="../index.html">Volver</a>
 </body>
 </html>

@@ -23,13 +23,16 @@
 
 		if(isset($_POST["numero"])){
 			$n = $_POST["numero"];
-			echo "<p>$n1,$n2</p>"; /* 0,1 */
-			for ($i=0; $i < ($n/2)+1 ; $i++){
-				$n1 += $n2; //n1 = 1; 2;
-				$n2 = $n1 + $n2; //1 + 1 = 2;
+			echo "<p>$n1,$n2</p>"; 
+			for ($i=1; $i < ($n/2) ; $i++){
+				$n1 += $n2;
+				$n2 = $n1 + $n2;
 				echo "<p>$n1,$n2</p>";
 			}
 		}
 	?>
+
+
+    <a id="volver" href="../index.html">Volver</a>
 </body>
 </html>

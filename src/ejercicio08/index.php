@@ -56,5 +56,7 @@
 		}
 		?>
 	</form>
+
+	    <a id="volver" href="../index.html">Volver</a>
 </body>
 </html>
