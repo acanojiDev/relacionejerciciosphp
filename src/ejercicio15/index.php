@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movimientos del Alfil</title>
+    <link rel="stylesheet" href="../global.scss">
+    <link rel="stylesheet" href="../style.css">
     <style>
         .tablero {
             display: grid;
@@ -57,7 +59,9 @@
                     $clase = 'movimiento';
                 }
 
-                echo "<div class='casilla $clase'>$columnas[$c-1]$f</div>";
+                echo '<div class="casilla ' . $clase . '">' . $columnas[$c-1] . $f . '</div>';
+
+
             }
         }
         echo '</div>';
