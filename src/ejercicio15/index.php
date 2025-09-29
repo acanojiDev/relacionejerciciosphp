@@ -25,7 +25,7 @@
         .blanca { background-color: #f0d9b5; }
         .negra { background-color: #b58863; }
         .alfil { background-color: yellow; }
-        .movimiento { background-color: lightgreen; }
+        .movimiento { background-color: purple; }
     </style>
 </head>
 <body>
