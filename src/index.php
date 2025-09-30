@@ -8,11 +8,8 @@
     </head>
     <body>
         <header>
-            <!-- nombre de usuario -->
             <h2>Antonio Lorenzo Cano Jiménez</h2>
-            <!-- titulo de Plantilla relacion 1 de ejercicios -->
             <h1>Plantilla Relación 1 de Ejercicios</h1>
-            <!-- imagen foto perfil -->
             <img
                 class="profile-img"
                 src="./img/IMG_7883.jpeg"
@@ -21,9 +18,6 @@
         </header>
 
         <main>
-            <!-- Cada link lleva a un ejercicio diferente con la siguiente nomenclatura:
-        	ej: ejercicio01
-        	La estructura sera una carpeta por cada ejercicio  -->
             <div class="ejercicios">
                 <a href="ejercicio01/">Ejercicio 01</a>
                 <a href="ejercicio02/">Ejercicio 02</a>
@@ -45,12 +39,6 @@
 
         <footer>
             <div class="footer-content">
-                <!-- Copyright de antonio con modal -->
-                <p class="copyright" onclick="openModal()">
-                    © 2025 Antonio - Todos los derechos reservados
-                </p>
-
-                <!-- redes sociales linkedin y github -->
                 <div class="social-links">
                     <img
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"

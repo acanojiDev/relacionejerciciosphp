@@ -43,6 +43,6 @@
 	}
 	?>
 
-	    <a id="volver" href="../index.html">Volver</a>
+	<a id="volver" href="/src">Volver</a>
 </body>
 </html>

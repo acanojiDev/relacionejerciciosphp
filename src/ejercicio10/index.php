@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-    <link rel="stylesheet" href="../global.scss">
+	<title>Media hasta número negativo</title>
+	<link rel="stylesheet" href="../global.scss">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-	<header>
-		<h1>Calculo la media de N numeros</h1>
-	</header>
+	<h1>Introduce números separados por comas (la media se calcula hasta el primer número negativo)</h1>
 	<form action="index.php" method="post">
-		<label for="numero">Introduce numeros</label>
-		<input type="number" name="number">
-		<button type="submit">Enviar</button>
+		<input type="text" name="numeros" placeholder="Ej: 5, 10, 3, -1" required>
+		<button type="submit">Calcular media</button>
 	</form>
 
 	<?php
+	if (isset($_POST['numeros'])) {
+		$entrada = $_POST['numeros'];
+		$partes = explode(",", $entrada);
 
-	if(isset($_POST["number"])){
-		$numero = $_POST["number"];
-		$numeroTotal = 0;
-		$i = 1;
-		do {
-			$numeroTotal+=$numero;
-			$i++;
-		} while ($numero >= 0);
-		$media = $numeroTotal / $i;
-		echo "<p>La media de los numeros  es: $media </p>";
+		$suma = 0;
+		$contador = 0;
+
+		foreach ($partes as $valor) {
+			$valor = trim($valor);
+			if (!is_numeric($valor)) continue;
+
+			if ($valor < 0) break;
+
+			$suma += $valor;
+			$contador++;
+		}
+
+		if ($contador > 0) {
+			$media = $suma / $contador;
+			echo "<p>La media de los números hasta el primer negativo es: <strong>$media</strong></p>";
+		} else {
+			echo "<p>No se han introducido números válidos antes del primer negativo.</p>";
+		}
 	}
 	?>
 
-
-    <a id="volver" href="../index.html">Volver</a>
+	<a id="volver" href="/src">Volver</a>
 </body>
 </html>

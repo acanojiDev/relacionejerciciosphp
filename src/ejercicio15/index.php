@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movimientos del Alfil</title>
+    <title>Ejercicio 15</title>
     <link rel="stylesheet" href="../global.scss">
     <link rel="stylesheet" href="../style.css">
     <style>
+        h1{
+            display: flex;
+            align-items:center;
+            justify-content: center;
+        }
         .tablero {
             display: grid;
             grid-template-columns: repeat(8, 50px);
             grid-template-rows: repeat(8, 50px);
             gap: 0;
             border: 2px solid black;
+            justify-content: center;
         }
         .casilla {
             width: 50px;
@@ -67,5 +73,6 @@
         echo '</div>';
     }
     ?>
+    <a id="volver" href="/src">Volver</a>
 </body>
 </html>

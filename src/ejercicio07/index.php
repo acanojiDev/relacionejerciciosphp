@@ -1,49 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Ejercicio 7</title>
     <link rel="stylesheet" href="../global.scss">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 	<header>
-		<h1>
-			Calculador de segundos restantes hasta media noche.
-		</h1>
+		<h1>Calculador de segundos restantes hasta medianoche</h1>
 	</header>
 
 	<form action="index.php" method="post">
-		<label for="hora">Introduzca la hora (en Horas y minutos): </label>
+		<label for="hourMinute">Introduzca la hora (HH:MM): </label>
 		<input
-		type="time"
-		id="hourMinute"
-		name="hourMinute"
-		name="hourMinute"
-		min="00:01"
-		max="23:59"
-		required />
-	<button type="submit">Enviar</button>
+			type="time"
+			id="hourMinute"
+			name="hourMinute"
+			min="00:01"
+			max="23:59"
+			required />
+		<button type="submit">Enviar</button>
 	</form>
 
 	<?php
-		if(isset($_POST["hourMinute"])){
-			$horas = $_POST["hourMinute"];
-			/* Divide el string $horas en partes, usando : como separador
-			ej: 16:45 lo devuelve en un array ["16", "45"]
+	if(isset($_POST["hourMinute"])){
+		$horas = $_POST["hourMinute"];
 
-			Despues asigna cadad elemento del array a una variable es decir
-			$h= "16"
-			$m = "45"*/
-			list($h, $m) = explode(":", "$horas");
-			$segundos = $h * 3600 + $m * 60;
+		list($h, $m) = explode(":", $horas);
 
-		}else{
-			echo "<p>Introduceme valores válidos</p>"
-		}
+		$segundos_transcurridos = $h * 3600 + $m * 60;
+		$segundos_dia = 24 * 3600;
+		$segundos_restantes = $segundos_dia - $segundos_transcurridos;
 
-
+		echo "<p>Desde las $h:$m quedan <strong>$segundos_restantes segundos</strong> hasta medianoche.</p>";
+	} else {
+		echo "<p>Introduce valores válidos</p>";
+	}
 	?>
+
+	<a id="volver" href="/src">Volver</a>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Ejercicio 11</title>
     <link rel="stylesheet" href="../global.scss">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -23,7 +23,7 @@
 
 		if(isset($_POST["numero"])){
 			$n = $_POST["numero"];
-			echo "<p>$n1,$n2</p>"; 
+			echo "<p>$n1,$n2</p>";
 			for ($i=1; $i < ($n/2) ; $i++){
 				$n1 += $n2;
 				$n2 = $n1 + $n2;
@@ -33,6 +33,6 @@
 	?>
 
 
-    <a id="volver" href="../index.html">Volver</a>
+    <a id="volver" href="/src">Volver</a>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 14</title>
     <link rel="stylesheet" href="../global.scss">
     <link rel="stylesheet" href="../style.css">
     <style>
@@ -56,6 +56,7 @@
 
     echo "<p><strong>Total de puntos:</strong> $total</p>";
     ?>
+    <a id="volver" href="/src">Volver</a>
 </body>
 </html>
 
